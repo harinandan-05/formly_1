@@ -14,6 +14,8 @@ export default function EditableUi() {
     {id:crypto.randomUUID() , text:''}
   ])
 
+  console.log(block,"block now")
+
   const [active,setactive] = useState(false)
 
   function handleEnter(currentId:string){
@@ -31,13 +33,13 @@ export default function EditableUi() {
   }
 
   function textChange(currentId:string,content:string){
-      const findBlock = block.map(b =>{
-        if(b.id === currentId){
-            return {...block,content}
-        }
-        return block;
-      }) 
+    setBlock(prev =>
+      prev.map(b => 
+        b.id === currentId ? {...b,text:content}:b
+      )
+    )
   }
+
 
 
   return (
@@ -59,9 +61,6 @@ export default function EditableUi() {
         }}
       ></h1>
       <div>
-        {block.map(e =>(
-          
-        ))}
         <Blocks onEnterkey={handleEnter} onText={textChange} isactive={active} currentRef={Blockref}/>
       </div>
     </div>

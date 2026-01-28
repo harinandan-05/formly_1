@@ -26,7 +26,7 @@ export default function Blocks({id,content,isactive,onEnterkey,onText,currentRef
         <div contentEditable='true' ref={currentRef}
         
       suppressContentEditableWarning
-      className="outline-none min-h-6 text-gray-800"
+      className="outline-none min-h-6 text-gray-800 ml-101 mt-6"
       data-placeholder="Type / for blocks"
         onKeyDown={(e) =>{
             const key = e.key
