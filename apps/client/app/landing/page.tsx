@@ -1,55 +1,58 @@
 "use client"
-import { useState } from "react"
+import doodle4 from '../../public/doodle4.jpeg'
+import Image from "next/image"
 
 export default function Landing(){
-    const [open , setOpen] = useState(false)
+    
     return (
-        <div className="bg-white w-full min-h-screen">
-            <nav className="w-full">
+        <div className="bg-white w-full min-h-screen overflow-hidden">
+            <nav className="w-full relative">
                 <div className="px-3 mx-auto max-w-7xl mt-4 ">
                     <div className="flex justify-between  items-center">
                         {/* Logo */}
-                        <div className="font-bold  text-3xl cursor-pointer">
-                            *Formly
+                        <div className="text-3xl cursor-pointer font-bold font-serif">
+                            ~Formly
                         </div>
                         <div className="hidden md:flex items-center gap-5">
-                            <div className="cursor-pointer text-gray-600">
+                            <div className="cursor-pointer font-semibold text-gray-600">
                             Pricing
                         </div>
-                        <div className="pl-5 cursor-pointer text-gray-600">
+                        <div className="pl-5 cursor-pointer font-semibold text-gray-600">
                             Log in
                         </div>
-                        <div className="pl-5 cursor-pointer text-gray-600">
+                        <div className="pl-5 cursor-pointer font-semibold text-gray-600">
                             Sign up
                         </div>
-                        <button className="bg-yellow-300 rounded-sm w-auto p-1 cursor-pointer">
-                            create form
+                        <button className="bg-yellow-300 font-semibold rounded-sm w-auto px-2 py-1 cursor-pointer">
+                            Create form
                         </button>
                         </div>
-                        <div className="text-4xl pr-4" onClick={() => setOpen(!open)}>
-                            {open ? <button>✕</button> : <button>☰</button>}
-                        </div>
                     </div>
-                    <div>
-                        {open && (
-                            <div className="md:hidden absolute right-11 border border-gray-200 rounded-md shadow-md p-4 flex flex-col gap-4">
-                                <div>
-                                    Pricing
-                                </div>
-                                <div>
-                                    Log in
-                                </div>
-                                <div className="">
-                                    Sign up
-                                </div>
-                                <button className="bg-yellow-300 rounded-sm p-1 font-medium">
-                                    Create Form
-                                </button>
-                            </div>
-                        )}
+                    <div className="flex gap-4 absolute right-5 bottom-2 items-center md:hidden">
+                        <div className="font-medium cursor-pointer">
+                            Login
+                    </div>
+                    <div className="font-medium cursor-pointer">
+                        Sign up
+                    </div>
                     </div>
                 </div>
             </nav>
+
+            {/* hero section */}
+            <section className="w-full mt-40">
+                <div className="w-full max-w-7xl mx-auto px-7">
+                        <div className="flex flex-col gap-5 ">
+                            <h1 className="text-3xl md:text-6xl font-bold leading-tight text-center">The simplest way to create forms</h1>
+                            <p className="px-1 text-md md:text-[19px] font-medium text-gray-800 text-center">
+                                Say goodbye to boring forms. Meet formly — the free, intuitive form builder you’ve been looking for.
+                            </p>
+                            <button className="bg-yellow-300 p-2 font-semibold mt-4 rounded-md self-center md:self-center">
+                                Create a free Form  ››
+                            </button>
+                        </div>
+                </div>
+            </section>
         </div>
     )
 }
