@@ -4,7 +4,7 @@ import { DiPostgresql ,DiStackoverflow ,DiNpm ,DiApple ,DiSwift,DiSass,DiUnitySm
 export default function Landing(){
     
     return (
-        <div className="bg-white w-full min-h-screen overflow-hidden">
+        <div className="bg-white w-full min-h-screen">
             <nav className="w-full relative">
                 <div className="px-3 mx-auto max-w-7xl mt-4 ">
                     <div className="flex justify-between  items-center">
@@ -52,7 +52,7 @@ export default function Landing(){
                             <p className='text-center text-sm md:text-md'>
                                 No signup required
                             </p>
-                            <p className="text-center text-sm mt-20 md:text-md ">
+                            <p className="text-center text-sm font-semibold mt-20 md:text-md ">
                                 Powering 500,000+ teams at the world’s best companies
                             </p>
                         </div>
@@ -62,33 +62,57 @@ export default function Landing(){
             {/* partners icons section */}
 
             <section className="w-full mt-8">
-                <div className="w-full max-w-7xl mx-auto flex gap-15 px-50">
-                    <div className="">
-                        <DiPostgresql size={60} />
+                <div className="w-full max-w-7xl mx-auto flex px-20 md:px-60">
+                    <div className="grid grid-cols-3 gap-12 md:gap-20 md:grid-cols-6 justify-center place-items-center">
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiPostgresql className="w-full h-full"/>
                     </div>
-                    <div>
-                        <DiApple size={60} />
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiApple className="w-full h-full" />
                     </div>
-                    <div>
-                        <DiNpm size={60}  />
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiNpm className="w-full h-full" />
                     </div>
-                    <div>
-                        <DiStackoverflow  size={60} />
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiStackoverflow className="w-full h-full" />
                     </div>
-                    <div>
-                        <DiSwift size={60}/>
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiSwift className="w-full h-full"/>
                     </div>
-                    <div>
-                        <DiSass size={60}/>
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <DiSass  className="w-full h-full"/>
                     </div>
-                    <div>
-                        <DiPhp size={60}/>
-                    </div>
-                    <div>
-                        <DiUnitySmall size={60}/>
                     </div>
                 </div>
             </section>
+
+
+            {/* Second hero section */}
+
+            <div className="w-full mt-30 md:mt-50">
+                <div className="w-full max-w-7xl mx-auto flex flex-col">
+                    <div className="px-10 text-md md:text-3xl md:px-48">
+                        <h1 className="font-bold">
+                        A form builder like no other
+                        </h1>
+                    </div>
+                    <div className="px-10 text-md md:text-2xl md:px-48 mt-3 md:mt-5">
+                        <p className="font-medium">
+                        Tally makes it simple for anyone to build free online forms. No need to code just type your questions like you would in a doc.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div className="border-yellow-300 border-5 mx-10 h-120 rounded-lg md:rounded-2xl mt-10 md:mx-72 md:h-96 max-w-7xl">
+                        <p className="font-bold pt-6 pl-5 text-2xl md:pt-8 md:pl-8 md:text-3xl">
+                            Unlimited forms and submissions for free
+                        </p>
+                        <p className="font-medium pl-5 mt-3 md:pl-8 md:mt-4">
+                        Paywalls getting in the way? Not anymore. Tally gives you unlimited forms and submissions,<br/> completely free, as long as you stay within our fair usage guidelines.
+                        </p>
+                </div>
         </div>
     )
 }
