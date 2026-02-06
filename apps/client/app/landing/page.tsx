@@ -102,7 +102,7 @@ export default function Landing() {
           </div>
           <div className="px-10 text-md md:text-2xl md:px-48 mt-3 md:mt-5">
             <p className="font-medium text-stone-800">
-              Tally makes it simple for anyone to build free online forms. No
+              Formly makes it simple for anyone to build free online forms. No
               need to code just type your questions like you would in a doc.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function Landing() {
           Unlimited forms and submissions for free
         </p>
         <p className="font-medium pl-5 mt-3 md:pl-8 md:mt-4 text-stone-800">
-          Paywalls getting in the way? Not anymore. Tally gives you unlimited
+          Paywalls getting in the way? Not anymore. Formly gives you unlimited
           forms and submissions,
           <br /> completely free, as long as you stay within our fair usage
           guidelines.
@@ -131,7 +131,7 @@ export default function Landing() {
             <div className="border-gray-300 border-2 h-96 md:ml-56 md:flex-2 p-6 rounded-2xl hover:shadow-xl">
               <h1 className="font-bold text-lg ">Just start typing</h1>
               <p className="mt-3">
-                Tally is a new type of online form builder that works like a
+                Formly is a new type of online form builder that works like a
                 text document. Just start typing on the page and insert blocks
                 same as Notion.
               </p>
@@ -168,7 +168,7 @@ export default function Landing() {
 
       <div className="w-full mt-24 md:mt-36">
         <div className=" max-w-7xl px-14 md:px-72 flex flex-col">
-          <div className="font-bold text-md  md:text-3xl text-stone-900">
+          <div className="font-bold text-xl  md:text-3xl text-stone-900">
             Designed for you
           </div>
           <div className="font-mediium md:text-lg text-stone-800 mt-2 md:mt-1 ">
@@ -204,92 +204,60 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* footer section
-      <div>
-        <div className="w-full">
-          <div className="max-w-7xl grid grid-cols-4 mx-72 mt-52 gap-32">
-            <div>
-              <h1 className="text-xl cursor-pointer font-bold font-serif">
+      <footer className="w-full border-t border-gray-200 mt-40">
+        <div className="max-w-7xl mx-auto px-6 md:px-56 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Brand */}
+            <div className="space-y-3">
+              <h1 className="text-2xl font-bold font-serif cursor-pointer">
                 ~Formly
               </h1>
-              <p className="font-bold">Made and hosted in the EU 🇪🇺</p>
-              <p>© 2026 Formly BV</p>
+              <p className="text-sm font-medium text-gray-700">
+                Made and hosted By harinandan
+              </p>
+              <p className="text-sm text-gray-500">© 2026 Formly</p>
             </div>
-            <div>
-              <h1>Product</h1>
-              <p>Pricinng</p>
-              <p>Features</p>
-              <p>Customers</p>
-              <p>RoadMap</p>
+
+            {/* Product */}
+            <div className="space-y-3">
+              <h2 className="font-semibold text-gray-900">Product</h2>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>Pricing</li>
+                <li>Features</li>
+                <li>Customers</li>
+                <li>Roadmap</li>
+                <li>Feature Request</li>
+                <li>Templates</li>
+                <li>Integrations</li>
+                <li>Status</li>
+              </ul>
             </div>
-            <div>
-              <h1>Help</h1>
-              <p>Get started</p>
-              <p>Help Center</p>
-              <p>Report Abuse</p>
+
+            {/* Help */}
+            <div className="space-y-3">
+              <h2 className="font-semibold text-gray-900">Help</h2>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>Get Started</li>
+                <li>Help Center</li>
+                <li>Report Abuse</li>
+                <li>How-To Guides</li>
+                <li>Hire an Expert</li>
+                <li>Contact Support</li>
+              </ul>
             </div>
-            <div>
-              <h1>Company</h1>
-              <p>About Us</p>
-              <p>Blog</p>
-              <p>Media Kit</p>
+
+            {/* Company */}
+            <div className="space-y-3">
+              <h2 className="font-semibold text-gray-900">Company</h2>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>About Us</li>
+                <li>Blog</li>
+                <li>Media Kit</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div> */}
-
-      <footer className="w-full border-t border-gray-200 mt-40">
-  <div className="max-w-7xl mx-auto px-6 py-16">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-
-      {/* Brand */}
-      <div className="space-y-3">
-        <h1 className="text-2xl font-bold font-serif cursor-pointer">
-          ~Formly
-        </h1>
-        <p className="text-sm font-medium text-gray-700">
-          Made and hosted By harinandan
-        </p>
-        <p className="text-sm text-gray-500">
-          © 2026 Formly
-        </p>
-      </div>
-
-      {/* Product */}
-      <div className="space-y-3">
-        <h2 className="font-semibold text-gray-900">Product</h2>
-        <ul className="space-y-2 text-sm text-gray-600">
-          <li>Pricing</li>
-          <li>Features</li>
-          <li>Customers</li>
-          <li>Roadmap</li>
-        </ul>
-      </div>
-
-      {/* Help */}
-      <div className="space-y-3">
-        <h2 className="font-semibold text-gray-900">Help</h2>
-        <ul className="space-y-2 text-sm text-gray-600">
-          <li>Get Started</li>
-          <li>Help Center</li>
-          <li>Report Abuse</li>
-        </ul>
-      </div>
-
-      {/* Company */}
-      <div className="space-y-3">
-        <h2 className="font-semibold text-gray-900">Company</h2>
-        <ul className="space-y-2 text-sm text-gray-600">
-          <li>About Us</li>
-          <li>Blog</li>
-          <li>Media Kit</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</footer>
-
+      </footer>
     </div>
   );
 }
