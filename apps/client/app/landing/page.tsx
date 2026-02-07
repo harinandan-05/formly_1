@@ -24,8 +24,8 @@ export default function Landing() {
               <div className="cursor-pointer font-semibold text-gray-600">
                 Pricing
               </div>
-              <div className="pl-5 cursor-pointer font-semibold text-gray-600">
-                Log in
+              <div className="pl-5 cursor-pointer font-semibold text-gray-600" >
+                <a href="http://localhost:3000/login">Log In</a>
               </div>
               <div className="pl-5 cursor-pointer font-semibold text-gray-600">
                 Sign up
