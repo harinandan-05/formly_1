@@ -1,10 +1,29 @@
 "use client"
-import { HugeiconsIcon } from '@hugeicons/react';
-import {GoogleIcon , AppleIcon} from '@hugeicons/core-free-icons'
 import { ImSpinner3 } from "react-icons/im"
-
+import Google from '../icons/Google';
+import AppleIcon from '../icons/Apple';
+import { supabase } from '@repo/db/client';
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Login(){
+
+    const router = useRouter();
+    const [loading , setloading] = useState(false)
+
+    async function googleAuth(provider: "google" | "apple") {
+        const {error} = await supabase.auth.signInWithOAuth({
+            provider,
+            options:{
+                redirectTo:`${window.location.origin}/auth/callback`
+            }
+        })
+
+        if(error){
+            console.log(error)
+        }
+    }
+
 
 
     return (
@@ -14,27 +33,17 @@ export default function Login(){
                     <div className='mt-20'>
                         <ImSpinner3  size={32}  />
                     </div>
-                    <h1 className='mt-14 text-stone-900 text-2xl font-semibold'>Welcome Back!</h1>
+                    <h1 className='mt-14 text-stone-900 text-2xl font-bold'>Welcome back</h1>
 
                     <button className='flex border-2 border-stone-200 rounded-md py-1 w-82 gap-2 justify-center mt-6 hover:bg-stone-100 font-semibold text-stone-500'>
-                        <HugeiconsIcon
-                        size={22}
-                        color='black'
-                        strokeWidth={2}
-                        icon={GoogleIcon}
-                        />
+                        <Google />
 
-                        <span className='text-md'>
+                        <span className='text-md' onClick={() => googleAuth("google")}>
                             Continue with Google
                         </span>
                     </button>
-                    <button className='flex border-2 border-stone-200 rounded-md py-1 w-82 justify-center gap-2 mt-4 hover:bg-stone-100 font-semibold text-stone-500'>
-                        <HugeiconsIcon
-                        size={22}
-                        color='black'
-                        strokeWidth={2}
-                        icon={AppleIcon}
-                        />
+                    <button className='flex border-2 border-stone-200 rounded-md py-1 w-82 justify-center gap-2 mt-3 hover:bg-stone-100 font-semibold text-stone-500'>
+                        <AppleIcon />
                         <span className='text-md'>
                             Continue with Apple
                         </span>
@@ -69,7 +78,7 @@ export default function Login(){
                 </div>
 
                 <div className='mr-24 mt-4 text-stone-700 text-sm '>
-                    <p>Dont have an account yet? <a href='http://localhost:3000/landing' className='underline'>Signup</a></p>
+                    <p>Dont have an account yet? <a href='http://localhost:3000/signup' className='underline'>Signup</a></p>
                     <p>Forgot password? <a href='http://localhost:3000/landing' className='underline'>Reset</a></p>
                 </div>
             </div>

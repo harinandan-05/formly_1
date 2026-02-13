@@ -22,13 +22,13 @@ export default function Landing() {
             </div>
             <div className="hidden md:flex items-center gap-5">
               <div className="cursor-pointer font-semibold text-gray-600">
-                Pricing
+                <a href="http://localhost:3000/pricing">Pricing</a>
               </div>
               <div className="pl-5 cursor-pointer font-semibold text-gray-600" >
                 <a href="http://localhost:3000/login">Log In</a>
               </div>
               <div className="pl-5 cursor-pointer font-semibold text-gray-600">
-                Sign up
+                <a href="http://localhost:3000/signup">Sign up</a>
               </div>
               <button className="bg-yellow-300 font-semibold rounded-sm w-auto px-2 py-1 cursor-pointer">
                 Create form
