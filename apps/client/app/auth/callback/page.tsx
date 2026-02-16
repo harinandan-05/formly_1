@@ -17,12 +17,12 @@ export default function Callback(){
             }
 
             if(data.session){
-                router.push('/editable')
+                router.push('/dashboard')
             }
         }
 
         handleAuth()
-    },[])
+    },[router])
 
     return (
         <div>

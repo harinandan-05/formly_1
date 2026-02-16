@@ -6,7 +6,7 @@ export default function DashboardLayout({children,}:{children:React.ReactNode}){
             <Sidebar />
             <main className="flex-1 bg-stone-100">
                 {children}
-            </main>
+            </main> 
         </div>
     )
 }
