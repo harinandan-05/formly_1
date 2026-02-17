@@ -24,7 +24,7 @@ export default function SidebarItem({
         />
         <p
           className={`text-sm font-semibold ${
-            highlight ? "text-green-500" : "text-stone-600"
+            highlight ? "text-green-600" : "text-stone-600"
           }`}
         >
           {label}

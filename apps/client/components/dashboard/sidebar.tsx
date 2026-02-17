@@ -29,17 +29,17 @@ export default function Sidebar() {
       </div>
 
       {/* Main navigation */}
-      <div className="flex flex-col gap-2.5 mt-4 items-start">
+      <div className="flex flex-col gap-2.5 mt-4 items-start cursor-pointer">
         <SidebarItem icon={TfiDribbble} label="Home" isActive />
         <SidebarItem icon={BiSolidCity} label="Analytics" />
         <SidebarItem icon={TfiSettings} label="Settings" />
         <SidebarItem icon={TfiTrash} label="Trash" />
-        <SidebarItem icon={TfiArrowCircleUp} label="Upgrade now" highlight />
+        <SidebarItem icon={TfiArrowCircleUp} label="Upgrade plan" highlight />
       </div>
 
       {/* Workspace */}
       <div className="flex flex-col mt-8 gap-2.5">
-        <div className="mx-4 max-w-64">
+        <div className="mx-4 max-w-64 cursor-pointer">
           <p className="text-xs text-stone-500 font-bold">Workspaces</p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Sidebar() {
 
         <SidebarItem icon={TfiLayoutAccordionSeparated} label="Templates" />
         <SidebarItem icon={TfiMapAlt} label="Road map" />
-        <SidebarItem icon={TfiPlus} label="Whats new!" highlight />
+        <SidebarItem icon={TfiPlus} label="What's new" highlight />
 
         <div className="max-w-64 flex items-center hover:bg-stone-200 rounded-md w-60 py-0.5">
           <div className="flex gap-1 items-center mx-4">
